@@ -1,0 +1,20 @@
+screenshot:
+  browsers:
+    - "OS-X_Lion_firefox_34.0"
+    - "OS-X_Lion_firefox_35.0"
+    - "OS-X_Lion_firefox_36.0"
+    - "OS-X_Lion_firefox_37.0"
+    - "iPhone-5_ios_8.3_Mobile-Safari"
+    - "iPhone-6_ios_8.3_Mobile-Safari"
+browserstack:
+  username: "YOUR_BROWSERSTACK_USERNAME"
+  password: "YOUR_BROWSERSTACK_PASSWORD"
+storage:
+  fog_credentials:
+    provider: "Local"
+    local_root: <%= "#{Dir.pwd}/tmp" %>
+    endpoint: <%= "file:///#{Dir.pwd}/tmp" %>
+  fog_directory: "sample"
+slack:
+  enabled: false
+  incoming_webhook: "SLACK_INCOMING_WEBHOOK_URL"

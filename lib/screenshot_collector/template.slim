@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title = title
+    link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"
+  body
+    div.container
+      h1 Screenshot
+      - screenshots.each do |device, screenshots_per_os|
+        h2 = device
+        - screenshots_per_os.each do |os, screenshots|
+          h3 = os
+          div.row
+            - screenshots.each do |screenshot|
+              div.col-md-2 style="padding: 10px;"
+                table.table.table-bordered style="margin: 0;font-size: 0.8em;"
+                  tr
+                    td style="text-align: center"
+                      a href=screenshot[:image_url] target="_blank"
+                        img src=screenshot[:thumb_url]
+                  tr
+                    td style="text-align: center;height: 2.0em;"
+                      = screenshot.slice(:device, :os, :os_version, :browser, :browser_version).values.join(" ")
