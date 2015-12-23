@@ -15,6 +15,8 @@ bundle exec rake screenshot:update_browsers
 bundle exec rake screenshot:take[https://github.com/]
 ```
 
+![screenshot](misc/screenshot.png)
+
 ## Contributing
 
 1. Fork it
